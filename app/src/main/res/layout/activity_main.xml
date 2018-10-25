@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="@dimen/title_bar_text_horizontal_padding"
+        android:paddingRight="@dimen/title_bar_text_horizontal_padding"
+        android:paddingTop="@dimen/title_bar_text_vertical_padding"
+        android:paddingBottom="@dimen/title_bar_text_vertical_padding"
+        android:text="@string/main_activity_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_bar_text_size" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/option_input_horizontal_padding"
+        android:paddingRight="@dimen/option_input_horizontal_padding"
+        android:paddingTop="@dimen/hint_text_vertical_padding"
+        android:paddingBottom="@dimen/hint_text_vertical_padding"
+        android:text="@string/hint_text"
+        android:background="@color/lightGreen"
+        android:textSize="@dimen/hint_text_size"
+        android:textColor="@android:color/white"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/option_input"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/add_option_button_size"
+            android:background="@android:color/white"
+            android:hint="Enter option"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/option_input_horizontal_padding"
+            android:paddingTop="@dimen/option_input_vertical_padding"
+            android:paddingRight="@dimen/option_input_horizontal_padding"
+            android:paddingBottom="@dimen/option_input_vertical_padding"
+            android:textSize="@dimen/option_input_text_size" />
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/add_option"
+            android:layout_width="@dimen/add_option_button_size"
+            android:layout_height="@dimen/add_option_button_size"
+            android:background="@color/veryLightGreen"
+            android:scaleType="fitCenter"
+            android:src="@drawable/plus_icon" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="4dp"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/doneBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="@string/done_button_text"
+        android:textColor="@color/white"
+        android:textSize="@dimen/main_button_text_size" />
+
+</LinearLayout>

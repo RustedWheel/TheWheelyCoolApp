@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">The Wheely Cool App</string>
+    <string name="main_activity_title">Manage Options</string>
+    <string name="hint_text">Swipe left for more options...</string>
+    <string name="spin_wheel_activity_title">Spin Wheel</string>
+    <string name="done_button_text">Done</string>
+    <string name="spin_button_text">Spin</string>
+    <string name="option_placeholder_text">Option</string>
+</resources>

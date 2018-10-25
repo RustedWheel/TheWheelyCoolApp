@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="@dimen/title_bar_text_horizontal_padding"
+        android:paddingTop="@dimen/title_bar_text_vertical_padding"
+        android:paddingRight="@dimen/title_bar_text_horizontal_padding"
+        android:paddingBottom="@dimen/title_bar_text_vertical_padding"
+        android:text="@string/spin_wheel_activity_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_bar_text_size"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--    <com.qi.david.spinwheel.views.CustomView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:id="@+id/custom_view"
+        app:square_color="@color/squareColor"
+        app:square_size="@dimen/squareSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <com.qi.david.spinwheel.views.SpinWheel
+        android:id="@+id/custom_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:circle_color="@color/circleColor"
+        app:wheel_colors="@array/wheel_colors_default"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/status_bar"
+        app:layout_constraintBottom_toTopOf="@id/spinBtn"
+         />
+
+    <Button
+        android:id="@+id/spinBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="@string/spin_button_text"
+        android:textColor="@color/white"
+        android:textSize="@dimen/main_button_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</android.support.constraint.ConstraintLayout>
